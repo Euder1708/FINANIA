@@ -1,0 +1,19 @@
+- [x] Mejorar el método chatbot() en FinanzaController para detectar montos numéricos en mensajes y sugerir agregar transacción de ingreso.
+- [x] Mejorar el prompt de OpenAI para manejar consultas de salario/ingreso mejor y continuar la conversación.
+- [x] Agregar mejor manejo de errores para asegurar respuestas siempre.
+- [x] Actualizar generateChatbotResponse() con respuestas útiles para montos.
+- [x] Corregir importación de OpenAI para evitar errores.
+- [x] Cambiar a usar config('services.openai.api_key') en lugar de env().
+- [x] Ejecutar php artisan config:cache para actualizar configuración.
+- [x] Agregar manejo específico para errores de rate limit de OpenAI.
+- [x] Simplificar manejo de errores para usar siempre fallback.
+- [x] Remover código OpenAI del método chatbot() para evitar errores de rate limit.
+- [x] Cambiar respuestas del chatbot a generales, no específicas de finanzas.
+- [x] Actualizar vista del chatbot para reflejar que es un asistente general.
+- [x] Restaurar funcionalidad de OpenAI con fallback para rate limit.
+- [x] Mejorar respuestas predefinidas con más variedad y temas específicos.
+- [x] Cambiar modelo a gpt-4o-mini para mejores límites y respuestas más naturales.
+- [x] Actualizar prompt para ser más como ChatGPT.
+- [x] Actualizar ChatbotController para usar mejor manejo de errores y prompt financiero.
+- [x] Cambiar vista del chatbot para usar la ruta /api/chat en lugar de /finanza/chatbot/message.
+- [] Probar el chatbot enviando mensajes como "hola" o "chiste".
