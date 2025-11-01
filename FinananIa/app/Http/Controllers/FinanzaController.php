@@ -131,13 +131,8 @@ class FinanzaController extends Controller
             $errorMessage = $e->getMessage();
             \Log::info('OpenAI error: ' . $errorMessage);
 
-            // Manejar específicamente rate limit
-            if (str_contains(strtolower($errorMessage), 'rate limit')) {
-                $reply = "Lo siento, he alcanzado el límite de solicitudes a mi servicio de IA por ahora. Esto es temporal y se resolverá en unos minutos. Mientras tanto, puedo ayudarte con consejos generales o preguntas sobre finanzas. ¿Qué te gustaría saber?";
-            } else {
-                // Para otros errores, usar respuestas predefinidas
-                $reply = $this->generateChatbotResponse($text);
-            }
+            // Siempre usar respuestas predefinidas cuando OpenAI falle
+            $reply = $this->generateChatbotResponse($text);
         }
 
         // Guardar la conversación en la base de datos

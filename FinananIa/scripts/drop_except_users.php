@@ -5,7 +5,7 @@ $port=3306;
 $user='root';
 $pass='';
 $db='finania';
-$keep = ['users','migrations'];
+$keep = ['users','migrations','chatbot_conversations'];
 try{
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$db", $user, $pass, [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
     $tables = $pdo->query("SHOW TABLES")->fetchAll(PDO::FETCH_COLUMN);
